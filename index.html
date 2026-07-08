@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yoshiyuki — Portfolio</title>
+  <title>Yoshi Partners — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Fixed background images (sky top / sea bottom) -->
-  <div class="bg-fixed-sky"></div>
-  <div class="bg-fixed-sea"></div>
+  <!-- Subtle fixed geometric background pattern -->
+  <div class="bg-pattern"></div>
 
   <!-- ===== Navigation ===== -->
   <nav class="nav">
     <div class="nav-inner">
-      <span class="nav-logo">yoshi.dev</span>
+      <span class="nav-logo">Yoshi Partners</span>
       <ul class="nav-links">
         <li><a href="#" data-page="top" class="active">トップ</a></li>
         <li><a href="#" data-page="profile">プロフィール</a></li>
@@ -34,7 +33,7 @@
     <section class="hero">
       <div class="hero-bg"></div>
       <div class="container hero-content">
-        <div class="hero-tag">// ビジネス支援・起業サポート</div>
+        <div class="hero-tag">ビジネス支援・起業サポート</div>
         <h1 class="hero-title">
           あなたの夢を、<br>
           <span>計画に変える</span><br>
@@ -52,22 +51,28 @@
 
     <section class="skills-section">
       <div class="container">
-        <div class="section-label">// values</div>
+        <div class="section-label">values</div>
         <h2 class="section-title">価値観・仕事のスタンス</h2>
         <p class="section-desc">大切にしていること、仕事に向き合う姿勢です。</p>
         <div class="skills-grid">
           <div class="skill-card">
-            <div class="skill-icon">💡</div>
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.74V17h8v-2.26A7 7 0 0 0 12 2z"/></svg>
+            </div>
             <div class="skill-name">形にする提案</div>
             <p class="skill-desc">夢を夢のままで終わらせず、一歩ずつ実現できる計画に落とし込みます</p>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">📊</div>
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="4" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="20" y1="20" x2="20" y2="14"/></svg>
+            </div>
             <div class="skill-name">数字で支える</div>
             <p class="skill-desc">金融機関での経験を活かし、納得感のある資金計画・事業計画づくりをお手伝いします</p>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🔄</div>
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            </div>
             <div class="skill-name">長く寄り添う</div>
             <p class="skill-desc">一度の相談で終わりにせず、必要なときにいつでも頼れる存在でありたいと思っています</p>
           </div>
@@ -77,7 +82,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="footer-text">© 2026 Yoshiyuki — Built with HTML &amp; CSS</p>
+        <p class="footer-text">© 2026 Yoshiyuki</p>
       </div>
     </footer>
 
@@ -91,10 +96,12 @@
 
         <div class="profile-hero">
           <div class="profile-avatar-wrap">
-            <div class="profile-avatar">👨‍💻</div>
+            <div class="profile-avatar">
+              <span class="profile-avatar-initials">YS</span>
+            </div>
           </div>
           <div>
-            <p class="profile-role">// Web Developer</p>
+            <p class="profile-role">Business Support</p>
             <h1 class="profile-name">Y・S</h1>
             <p class="profile-bio">
               金融機関のスタートアップ支援部署で勤務中。起業予備軍向けに創業計画書の作成支援、スタートアップ向けに資金調達（デット調達）支援、学生向けにビジネスプランの作成支援などを行なっている。AI（Claude）を使い倒せるように努力中。兵庫県在住。全国転勤のため、次はどこに行くか不明。
@@ -111,7 +118,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="footer-text">© 2026 Yoshiyuki — Built with HTML &amp; CSS</p>
+        <p class="footer-text">© 2026 Yoshiyuki</p>
       </div>
     </footer>
 
@@ -122,13 +129,15 @@
 
     <section class="activities-section">
       <div class="container">
-        <div class="section-label">// activities</div>
+        <div class="section-label">activities</div>
         <h2 class="section-title">活動</h2>
-        <p class="section-desc">個人プロジェクトや技術コミュニティでの活動をまとめています。</p>
+        <p class="section-desc">事業者・起業家の皆さまへの支援活動をご紹介します。</p>
         <div class="activities-grid">
 
           <div class="activity-card">
-            <span class="activity-icon">🏪</span>
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
             <span class="activity-tag">Support</span>
             <h3 class="activity-title">スモールビジネス支援</h3>
             <p class="activity-desc">
@@ -138,7 +147,9 @@
           </div>
 
           <div class="activity-card">
-            <span class="activity-icon">🚀</span>
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
             <span class="activity-tag">Support</span>
             <h3 class="activity-title">スタートアップ支援</h3>
             <p class="activity-desc">
@@ -148,7 +159,9 @@
           </div>
 
           <div class="activity-card">
-            <span class="activity-icon">💡</span>
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
             <span class="activity-tag">Support</span>
             <h3 class="activity-title">アントレプレナーシップ支援</h3>
             <p class="activity-desc">
@@ -163,7 +176,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="footer-text">© 2026 Yoshiyuki — Built with HTML &amp; CSS</p>
+        <p class="footer-text">© 2026 Yoshiyuki</p>
       </div>
     </footer>
 
@@ -175,32 +188,28 @@
     <section class="blog-section">
       <div class="container">
         <div class="blog-header">
-          <div class="section-label">// blog</div>
+          <div class="section-label">blog</div>
           <h2 class="section-title">ブログ</h2>
         </div>
         <div class="coming-soon-wrap">
-          <div class="coming-soon-icon">✍️</div>
+          <div class="coming-soon-icon">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg>
+            </div>
+          </div>
           <div class="coming-soon-label">Coming Soon</div>
           <h3 class="coming-soon-title">ブログは準備中です</h3>
           <p class="coming-soon-desc">
-            技術メモや日々の気づきを書いていく予定です。
-            React・TypeScript・CSS・DevOps などを中心に発信していきます。もうしばらくお待ちください。
+            日々の気づきや取り組みを書いていく予定です。
+            スモールビジネス支援・スタートアップ支援・アントレプレナーシップ支援に関する話題を発信予定です。もうしばらくお待ちください。
           </p>
-          <div class="coming-soon-topics">
-            <span class="topic-chip">React</span>
-            <span class="topic-chip">TypeScript</span>
-            <span class="topic-chip">CSS</span>
-            <span class="topic-chip">DevOps</span>
-            <span class="topic-chip">AI</span>
-            <span class="topic-chip">Performance</span>
-          </div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <p class="footer-text">© 2026 Yoshiyuki — Built with HTML &amp; CSS</p>
+        <p class="footer-text">© 2026 Yoshiyuki</p>
       </div>
     </footer>
 
