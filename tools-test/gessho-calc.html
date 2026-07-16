@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>「食べていける月商」逆算ツール｜yoshi-startup 創業応援ツール</title>
+<meta name="description" content="生活費と経費、業種別の原価率（公庫調査の実データ）から、あなたに必要な月商・日商・1日の客数を逆算する無料ツール。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Old+Mincho:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F4E79;--ink:#22313F;--lblue:#DCE6F1;--yell:#FFF9E3;--ybd:#E0D49B;--org:#C55A11;--grn:#2E7D5B;--bg:#F6F8FB}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.7}
+.brand{background:var(--navy);color:#fff;font-size:13px;padding:8px 16px;letter-spacing:.06em}
+.brand a{color:#fff;text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 56px}
+.hero h1{font-family:'Zen Old Mincho',serif;font-size:clamp(24px,5.4vw,34px);line-height:1.45;color:var(--navy);margin:18px 0 8px;font-weight:700}
+.hero .lead{margin:0 0 6px;color:#44566b}
+.badge{display:inline-block;background:var(--lblue);color:var(--navy);font-size:12px;font-weight:700;border-radius:999px;padding:3px 12px;letter-spacing:.05em}
+.card{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(31,78,121,.10);padding:20px 18px;margin:18px 0}
+.card h2{font-size:17px;color:var(--navy);margin:0 0 4px;border-left:5px solid var(--navy);padding-left:10px}
+.card .sub{font-size:13px;color:#5a6b7f;margin:0 0 12px}
+.hint{font-size:12.5px;color:#5a6b7f;background:var(--lblue);border-radius:8px;padding:8px 12px;margin:10px 0 0}
+input[type=text],input[type=number],select,textarea{font:inherit;width:100%;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:10px 12px;color:var(--ink)}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #8fb4d9;outline-offset:1px}
+.row{display:flex;gap:8px;margin-top:8px}
+.row input{flex:1}
+.btn{font:inherit;font-weight:700;border:none;border-radius:8px;padding:10px 18px;cursor:pointer;background:var(--navy);color:#fff}
+.btn.sm{padding:10px 14px;white-space:nowrap}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.org{background:var(--org)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.chips li{background:var(--lblue);border-radius:999px;padding:6px 12px;font-size:14px;display:flex;align-items:center;gap:8px}
+.chips li button{border:none;background:none;color:var(--navy);font-weight:700;cursor:pointer;font-size:15px;padding:0}
+.result{background:var(--navy);color:#fff;border-radius:14px;padding:22px 18px;margin:18px 0}
+.result h2{margin:0 0 10px;font-size:18px}
+.result .big{font-size:clamp(30px,7vw,44px);font-weight:900;line-height:1.2}
+.bar{background:rgba(255,255,255,.25);border-radius:6px;height:12px;overflow:hidden;margin:4px 0 10px}
+.bar span{display:block;height:100%;background:#FFD666;border-radius:6px}
+.cta{background:#FDF3EA;border:1.5px solid var(--org);border-radius:14px;padding:18px;margin:22px 0}
+.cta h2{color:var(--org);font-size:16px;margin:0 0 6px}
+.cta a{color:var(--org);font-weight:700}
+.foot{font-size:12.5px;color:#6b7a8c;border-top:1px solid #d8e0ea;padding-top:14px;margin-top:30px}
+.foot .links{margin-top:8px}
+.foot .links a{color:var(--navy);margin-right:14px}
+.privacy{display:inline-block;background:#EAF4EC;color:var(--grn);border-radius:6px;font-size:12px;padding:2px 10px;font-weight:700}
+@media print{.btn,.brand,.cta,.foot .links,.noprint{display:none!important}body{background:#fff}.card,.result{box-shadow:none;border:1px solid #ccc}}
+@media (prefers-reduced-motion:no-preference){.card{transition:box-shadow .2s}}
+</style>
+</head>
+<body>
+<div class="brand"><a href="../index.html">yoshi-startup</a> ｜ 創業応援ツール</div>
+<div class="wrap">
+<div class="hero"><span class="badge">所要時間：3分</span><h1>その事業、月にいくら売れば<br>食べていけるのか。</h1><p class="lead">夜中にいちばん気になる数字を、先に出してしまいましょう。根拠は公庫の実データです。</p>
+<p class="noprint"><span class="privacy">✓ 入力内容はどこにも送信されません（すべてこの端末内で処理）</span></p></div>
+
+<div class="card"><h2>STEP1　毎月いくら必要？</h2><p class="sub">事業から手元に残したい金額です。</p>
+<label>生活費として必要な月額（円）<input type="number" id="life" placeholder="例：250000" min="0" oninput="calc()"></label>
+<label style="display:block;margin-top:10px">毎月の借入返済があれば（円）<input type="number" id="repay" placeholder="例：30000（なければ空欄）" min="0" oninput="calc()"></label></div>
+
+<div class="card"><h2>STEP2　お店・事業の毎月の経費</h2><p class="sub">家賃・水道光熱・通信・広告など、売上がゼロでも出ていくお金の合計。</p>
+<label>毎月の経費（円）<input type="number" id="cost" placeholder="例：150000" min="0" oninput="calc()"></label>
+<div class="hint">まだ分からなければ「家賃の約2倍」がざっくりの出発点。あとでワークシートの18 経費の洗い出しで正確に見積もれます。</div></div>
+
+<div class="card"><h2>STEP3　業種を選ぶ</h2><p class="sub">売上のうち材料・仕入れ代（＝原価）が占める割合は業種で大きく違います。</p>
+<select id="ind" onchange="pick()">
+<option value="38">一般飲食店（原価率 約38％）</option>
+<option value="37">食堂・レストラン（約37％）</option>
+<option value="34">居酒屋・酒場（約34％）</option>
+<option value="31">スナック・バー（約31％）</option>
+<option value="20">宿泊業（約20％）</option>
+<option value="62">小売業全体（約62％）</option>
+<option value="57">食品の小売（約57％）</option>
+<option value="39">菓子・パンの製造小売（約39％）</option>
+<option value="55">衣料品の小売（約55％）</option>
+<option value="15">美容業（約15％）</option>
+<option value="16">エステ（約16％）</option>
+<option value="10">教室・コンサル等（材料費ほぼなし・約10％）</option>
+<option value="custom">その他（自分で入力）</option>
+</select>
+<label style="display:block;margin-top:10px">原価率（％）<input type="number" id="rate" value="38" min="0" max="95" oninput="calc()"></label>
+<div class="hint">出典：日本政策金融公庫「小企業の経営指標調査」（2023年度）の従業者1〜4人規模・売上高総利益率の平均値から算出（原価率＝100％−総利益率）。</div></div>
+
+<div class="card"><h2>STEP4　客単価（分かれば）</h2>
+<label>お客様1人あたりの平均額（円）<input type="number" id="unit" placeholder="例：900（空欄でもOK）" min="0" oninput="calc()"></label></div>
+
+<div class="result" id="res" hidden><h2>あなたが「食べていける」ライン</h2>
+<div style="font-size:14px;opacity:.85">必要な月商（1ヶ月の売上）</div><div class="big" id="monthly">—</div>
+<div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:10px">
+<div><div style="font-size:13px;opacity:.85">1日あたり（25営業日）</div><div style="font-size:22px;font-weight:900" id="daily">—</div></div>
+<div id="custBox" hidden><div style="font-size:13px;opacity:.85">1日に必要なお客様</div><div style="font-size:22px;font-weight:900" id="cust">—</div></div></div>
+<div style="background:rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;margin-top:14px;font-size:13.5px" id="note"></div>
+<div class="row noprint"><button class="btn ghost" onclick="window.print()">結果を印刷・PDF保存</button></div></div>
+<script>
+function pick(){const s=document.getElementById('ind');const r=document.getElementById('rate');if(s.value!=='custom'){r.value=s.value;}r.focus();calc();}
+function yen(n){return n.toLocaleString('ja-JP')+' 円';}
+function calc(){
+ const life=+document.getElementById('life').value||0;
+ const repay=+document.getElementById('repay').value||0;
+ const cost=+document.getElementById('cost').value||0;
+ const rate=Math.min(+document.getElementById('rate').value||0,95);
+ const unit=+document.getElementById('unit').value||0;
+ if(!life){document.getElementById('res').hidden=true;return;}
+ const need=(life+repay+cost)/(1-rate/100);
+ const m=Math.ceil(need/1000)*1000;
+ document.getElementById('res').hidden=false;
+ document.getElementById('monthly').textContent=yen(m);
+ document.getElementById('daily').textContent=yen(Math.ceil(m/25/100)*100);
+ document.getElementById('custBox').hidden=!unit;
+ if(unit)document.getElementById('cust').textContent=Math.ceil(m/25/unit)+' 人';
+ document.getElementById('note').textContent=`計算式：（生活費 ${yen(life)} ＋ 返済 ${yen(repay)} ＋ 経費 ${yen(cost)}）÷（1 − 原価率 ${rate}％）。税金・社会保険料は簡略化した概算です。この月商を「単価×数量」に分解する作業が、創業計画書の売上計画になります。`;
+}
+</script>
+<div class="cta"><h2>本格的に創業計画書を作るなら</h2>
+<p style="margin:0 0 8px">日本政策金融公庫の創業計画書を、ことば→数字→仕上げの順にまるごと組み立てられる無料Excel「<b>創業計画書 一気通貫ワークシート</b>」を配布しています。このツールの結果は、そのままワークシートの下書きになります。</p>
+<a href="#workbook">▶ ワークシートを無料でダウンロード</a></div><div class="foot">
+<p>※ 本ツールの結果は一般的な目安であり、融資の可否や事業の成否を保証するものではありません。数値の出典等の詳細は各解説記事をご覧ください。</p>
+<div class="links">ほかのツール：
+<a href="mittsuno-wa.html">3つの円</a><a href="junbido-check.html">準備度チェック</a><a href="gessho-calc.html">月商逆算</a><a href="career-tanaoroshi.html">キャリア棚卸し</a><a href="mendan30.html">面談の質問30</a></div>
+<p style="margin-top:10px">© yoshi-startup</p></div>
+</div></body></html>

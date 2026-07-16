@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>創業準備度チェック（15問・3分）｜yoshi-startup 創業応援ツール</title>
+<meta name="description" content="創業の準備がどこまで進んでいるかを15問で診断。動機・経験・顧客・お金・環境の5分野の弱点と、次の一歩がわかります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Old+Mincho:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F4E79;--ink:#22313F;--lblue:#DCE6F1;--yell:#FFF9E3;--ybd:#E0D49B;--org:#C55A11;--grn:#2E7D5B;--bg:#F6F8FB}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.7}
+.brand{background:var(--navy);color:#fff;font-size:13px;padding:8px 16px;letter-spacing:.06em}
+.brand a{color:#fff;text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 56px}
+.hero h1{font-family:'Zen Old Mincho',serif;font-size:clamp(24px,5.4vw,34px);line-height:1.45;color:var(--navy);margin:18px 0 8px;font-weight:700}
+.hero .lead{margin:0 0 6px;color:#44566b}
+.badge{display:inline-block;background:var(--lblue);color:var(--navy);font-size:12px;font-weight:700;border-radius:999px;padding:3px 12px;letter-spacing:.05em}
+.card{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(31,78,121,.10);padding:20px 18px;margin:18px 0}
+.card h2{font-size:17px;color:var(--navy);margin:0 0 4px;border-left:5px solid var(--navy);padding-left:10px}
+.card .sub{font-size:13px;color:#5a6b7f;margin:0 0 12px}
+.hint{font-size:12.5px;color:#5a6b7f;background:var(--lblue);border-radius:8px;padding:8px 12px;margin:10px 0 0}
+input[type=text],input[type=number],select,textarea{font:inherit;width:100%;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:10px 12px;color:var(--ink)}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #8fb4d9;outline-offset:1px}
+.row{display:flex;gap:8px;margin-top:8px}
+.row input{flex:1}
+.btn{font:inherit;font-weight:700;border:none;border-radius:8px;padding:10px 18px;cursor:pointer;background:var(--navy);color:#fff}
+.btn.sm{padding:10px 14px;white-space:nowrap}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.org{background:var(--org)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.chips li{background:var(--lblue);border-radius:999px;padding:6px 12px;font-size:14px;display:flex;align-items:center;gap:8px}
+.chips li button{border:none;background:none;color:var(--navy);font-weight:700;cursor:pointer;font-size:15px;padding:0}
+.result{background:var(--navy);color:#fff;border-radius:14px;padding:22px 18px;margin:18px 0}
+.result h2{margin:0 0 10px;font-size:18px}
+.result .big{font-size:clamp(30px,7vw,44px);font-weight:900;line-height:1.2}
+.bar{background:rgba(255,255,255,.25);border-radius:6px;height:12px;overflow:hidden;margin:4px 0 10px}
+.bar span{display:block;height:100%;background:#FFD666;border-radius:6px}
+.cta{background:#FDF3EA;border:1.5px solid var(--org);border-radius:14px;padding:18px;margin:22px 0}
+.cta h2{color:var(--org);font-size:16px;margin:0 0 6px}
+.cta a{color:var(--org);font-weight:700}
+.foot{font-size:12.5px;color:#6b7a8c;border-top:1px solid #d8e0ea;padding-top:14px;margin-top:30px}
+.foot .links{margin-top:8px}
+.foot .links a{color:var(--navy);margin-right:14px}
+.privacy{display:inline-block;background:#EAF4EC;color:var(--grn);border-radius:6px;font-size:12px;padding:2px 10px;font-weight:700}
+@media print{.btn,.brand,.cta,.foot .links,.noprint{display:none!important}body{background:#fff}.card,.result{box-shadow:none;border:1px solid #ccc}}
+@media (prefers-reduced-motion:no-preference){.card{transition:box-shadow .2s}}
+</style>
+</head>
+<body>
+<div class="brand"><a href="../index.html">yoshi-startup</a> ｜ 創業応援ツール</div>
+<div class="wrap">
+<div class="hero"><span class="badge">15問・約3分</span><h1>あなたの創業準備、<br>いま何合目ですか？</h1><p class="lead">直感で答えてOK。5つの分野ごとの強み・弱みと「次の一歩」がわかります。</p>
+<p class="noprint"><span class="privacy">✓ 入力内容はどこにも送信されません（すべてこの端末内で処理）</span></p></div>
+<div class="card"><h2>動機</h2><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q1．創業したい理由を、自分の言葉で1分間話せる</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q1" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q1" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q1" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q2．「なぜその事業か」を家族や友人に話したことがある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q2" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q2" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q2" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q3．収入が不安定になっても続けたいと思える理由がある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q3" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q3" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q3" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset></div><div class="card"><h2>経験・スキル</h2><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q4．始めたい事業に関わる仕事や活動の経験がある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q4" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q4" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q4" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q5．その分野で「人より得意」と言える技術・知識がある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q5" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q5" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q5" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q6．事業に活かせる資格・実績・人脈のどれかがある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q6" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q6" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q6" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset></div><div class="card"><h2>顧客・市場</h2><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q7．「最初のお客様になってくれそうな人」の顔が浮かぶ</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q7" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q7" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q7" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q8．競合になりそうな店・会社を3つ挙げられる</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q8" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q8" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q8" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q9．競合ではなく自分が選ばれる理由を一言で言える</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q9" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q9" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q9" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset></div><div class="card"><h2>お金</h2><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q10．開業に必要な金額をざっくりでも計算したことがある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q10" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q10" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q10" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q11．自己資金を計画的に貯めている（通帳に貯めた履歴がある）</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q11" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q11" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q11" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q12．生活費の備えと開業資金を分けて考えている</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q12" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q12" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q12" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset></div><div class="card"><h2>家族・環境</h2><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q13．家族は創業の考えを知っていて、反対していない</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q13" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q13" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q13" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q14．開業後しばらく収入が減っても家計が回る見通しがある</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q14" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q14" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q14" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset><fieldset style="border:none;margin:0 0 14px;padding:0"><legend style="font-weight:700;padding:0 0 6px">Q15．相談できる先輩経営者や支援機関を知っている</legend>
+<div class="row" role="radiogroup">
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q15" value="2" onchange="calc()"> はい</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q15" value="1" onchange="calc()"> どちらとも</label>
+<label style="flex:1;text-align:center;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:8px 4px;cursor:pointer"><input type="radio" name="q15" value="0" onchange="calc()"> いいえ</label>
+</div></fieldset></div>
+<div class="result" id="res" hidden>
+<h2>診断結果</h2><div class="big"><span id="total">0</span><span style="font-size:18px;font-weight:400"> / 30点　</span><span id="level" style="font-size:22px"></span></div>
+<div id="bars" style="margin-top:14px"></div>
+<div id="advice" style="background:rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;margin-top:8px;font-size:14px"></div>
+<div class="row noprint"><button class="btn ghost" onclick="window.print()">結果を印刷・PDF保存</button></div>
+</div>
+<p class="hint noprint" id="prog">全15問に答えると結果が表示されます。</p>
+<script>
+const CATS=["動機", "経験・スキル", "顧客・市場", "お金", "家族・環境"];
+const ADV={"動機": ["動機は面談で最初に聞かれ、最後まで効く土台です。", "「3つの円の棚卸しツール」と、ワークシートの01 創業の動機から始めましょう。"], "経験・スキル": ["公庫の調査では、斯業経験の長さは生存率と関係します。", "「キャリアの棚卸しツール」で経験を掘り起こし、ワークシート02へ。"], "顧客・市場": ["「誰に売るか」が曖昧だと、売上計画がすべて砂上になります。", "ワークシートの04 ミニ3C・08 ペルソナで具体化しましょう。"], "お金": ["自己資金は金額そのものより「貯め方の履歴」が信用になります。", "「食べていける月商 逆算ツール」とワークシート12〜15へ。"], "家族・環境": ["創業は長期戦。応援団と相談先が続ける力になります。", "まず身近な人に構想を話すこと。支援機関の無料相談も使えます。"]};
+function calc(){
+ let total=0,done=0,cs=[0,0,0,0,0];
+ for(let i=1;i<=15;i++){const r=document.querySelector(`input[name=q${i}]:checked`);if(r){done++;const v=+r.value;total+=v;cs[Math.floor((i-1)/3)]+=v;}}
+ document.getElementById('prog').textContent=done<15?`あと ${15-done} 問です`:'';
+ if(done<15){document.getElementById('res').hidden=true;return;}
+ document.getElementById('res').hidden=false;
+ document.getElementById('total').textContent=total;
+ document.getElementById('level').textContent=total>=24?'準備はかなり進んでいます':total>=15?'あと一歩。弱点を補強しましょう':total>=8?'これから固めていく段階です':'まずは情報収集と棚卸しから';
+ let minI=0;cs.forEach((v,i)=>{if(v<cs[minI])minI=i});
+ document.getElementById('bars').innerHTML=CATS.map((c,i)=>`<div style="font-size:13px">${c}　${cs[i]}/6</div><div class="bar"><span style="width:${cs[i]/6*100}%"></span></div>`).join('');
+ const a=ADV[CATS[minI]];
+ document.getElementById('advice').innerHTML=`<b>いちばん伸びしろがあるのは「${CATS[minI]}」。</b><br>${a[0]}<br>▶ 次の一歩：${a[1]}`;
+ document.getElementById('res').scrollIntoView({behavior:'smooth'});
+}
+</script>
+<div class="cta"><h2>本格的に創業計画書を作るなら</h2>
+<p style="margin:0 0 8px">日本政策金融公庫の創業計画書を、ことば→数字→仕上げの順にまるごと組み立てられる無料Excel「<b>創業計画書 一気通貫ワークシート</b>」を配布しています。このツールの結果は、そのままワークシートの下書きになります。</p>
+<a href="#workbook">▶ ワークシートを無料でダウンロード</a></div><div class="foot">
+<p>※ 本ツールの結果は一般的な目安であり、融資の可否や事業の成否を保証するものではありません。数値の出典等の詳細は各解説記事をご覧ください。</p>
+<div class="links">ほかのツール：
+<a href="mittsuno-wa.html">3つの円</a><a href="junbido-check.html">準備度チェック</a><a href="gessho-calc.html">月商逆算</a><a href="career-tanaoroshi.html">キャリア棚卸し</a><a href="mendan30.html">面談の質問30</a></div>
+<p style="margin-top:10px">© yoshi-startup</p></div>
+</div></body></html>

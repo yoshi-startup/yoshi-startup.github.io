@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3つの円の棚卸しツール｜yoshi-startup 創業応援ツール</title>
+<meta name="description" content="「やりたい事」「できる事」「求められる事」を書き出して、3つが重なる事業のタネを見つける無料ツール。入力は端末内だけで処理されます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Old+Mincho:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F4E79;--ink:#22313F;--lblue:#DCE6F1;--yell:#FFF9E3;--ybd:#E0D49B;--org:#C55A11;--grn:#2E7D5B;--bg:#F6F8FB}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.7}
+.brand{background:var(--navy);color:#fff;font-size:13px;padding:8px 16px;letter-spacing:.06em}
+.brand a{color:#fff;text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 56px}
+.hero h1{font-family:'Zen Old Mincho',serif;font-size:clamp(24px,5.4vw,34px);line-height:1.45;color:var(--navy);margin:18px 0 8px;font-weight:700}
+.hero .lead{margin:0 0 6px;color:#44566b}
+.badge{display:inline-block;background:var(--lblue);color:var(--navy);font-size:12px;font-weight:700;border-radius:999px;padding:3px 12px;letter-spacing:.05em}
+.card{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(31,78,121,.10);padding:20px 18px;margin:18px 0}
+.card h2{font-size:17px;color:var(--navy);margin:0 0 4px;border-left:5px solid var(--navy);padding-left:10px}
+.card .sub{font-size:13px;color:#5a6b7f;margin:0 0 12px}
+.hint{font-size:12.5px;color:#5a6b7f;background:var(--lblue);border-radius:8px;padding:8px 12px;margin:10px 0 0}
+input[type=text],input[type=number],select,textarea{font:inherit;width:100%;background:var(--yell);border:1.5px solid var(--ybd);border-radius:8px;padding:10px 12px;color:var(--ink)}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #8fb4d9;outline-offset:1px}
+.row{display:flex;gap:8px;margin-top:8px}
+.row input{flex:1}
+.btn{font:inherit;font-weight:700;border:none;border-radius:8px;padding:10px 18px;cursor:pointer;background:var(--navy);color:#fff}
+.btn.sm{padding:10px 14px;white-space:nowrap}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.org{background:var(--org)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.chips li{background:var(--lblue);border-radius:999px;padding:6px 12px;font-size:14px;display:flex;align-items:center;gap:8px}
+.chips li button{border:none;background:none;color:var(--navy);font-weight:700;cursor:pointer;font-size:15px;padding:0}
+.result{background:var(--navy);color:#fff;border-radius:14px;padding:22px 18px;margin:18px 0}
+.result h2{margin:0 0 10px;font-size:18px}
+.result .big{font-size:clamp(30px,7vw,44px);font-weight:900;line-height:1.2}
+.bar{background:rgba(255,255,255,.25);border-radius:6px;height:12px;overflow:hidden;margin:4px 0 10px}
+.bar span{display:block;height:100%;background:#FFD666;border-radius:6px}
+.cta{background:#FDF3EA;border:1.5px solid var(--org);border-radius:14px;padding:18px;margin:22px 0}
+.cta h2{color:var(--org);font-size:16px;margin:0 0 6px}
+.cta a{color:var(--org);font-weight:700}
+.foot{font-size:12.5px;color:#6b7a8c;border-top:1px solid #d8e0ea;padding-top:14px;margin-top:30px}
+.foot .links{margin-top:8px}
+.foot .links a{color:var(--navy);margin-right:14px}
+.privacy{display:inline-block;background:#EAF4EC;color:var(--grn);border-radius:6px;font-size:12px;padding:2px 10px;font-weight:700}
+@media print{.btn,.brand,.cta,.foot .links,.noprint{display:none!important}body{background:#fff}.card,.result{box-shadow:none;border:1px solid #ccc}}
+@media (prefers-reduced-motion:no-preference){.card{transition:box-shadow .2s}}
+</style>
+</head>
+<body>
+<div class="brand"><a href="../index.html">yoshi-startup</a> ｜ 創業応援ツール</div>
+<div class="wrap">
+<div class="hero"><span class="badge">所要時間：10分</span><h1>「やりたい」「できる」「求められる」。<br>3つが重なる場所に、あなたの事業のタネがある。</h1><p class="lead">思いつくまま書き出すだけで、円が育ち、重なりが見えてきます。正解探しではなく、棚卸しです。</p>
+<p class="noprint"><span class="privacy">✓ 入力内容はどこにも送信されません（すべてこの端末内で処理）</span></p></div>
+
+<svg id="venn" viewBox="0 0 360 300" style="width:100%;max-width:420px;display:block;margin:0 auto" role="img" aria-label="やりたい事・できる事・求められる事の3つの円">
+<circle id="c1" cx="140" cy="115" r="78" fill="#1F4E79" fill-opacity=".28"/>
+<circle id="c2" cx="220" cy="115" r="78" fill="#2E7D5B" fill-opacity=".28"/>
+<circle id="c3" cx="180" cy="185" r="78" fill="#C55A11" fill-opacity=".28"/>
+<circle id="core" cx="180" cy="138" r="0" fill="#FFD666" fill-opacity=".95"/>
+<text x="92" y="62" font-size="13" font-weight="bold" fill="#1F4E79">やりたい <tspan id="n1">0</tspan></text>
+<text x="218" y="62" font-size="13" font-weight="bold" fill="#2E7D5B">できる <tspan id="n2">0</tspan></text>
+<text x="146" y="284" font-size="13" font-weight="bold" fill="#C55A11">求められる <tspan id="n3">0</tspan></text>
+<text id="coret" x="180" y="143" font-size="12" font-weight="bold" fill="#7a5b00" text-anchor="middle"></text>
+</svg>
+
+<div class="card"><h2>STEP1　やりたい事</h2><p class="sub">好き・ワクワクする・時間を忘れてしまう事。仕事に限らず書き出しましょう。</p>
+<div class="row"><input type="text" id="in1" placeholder="例：料理をふるまう、人に教える、健康づくり"><button class="btn sm" onclick="add(1)">追加</button></div>
+<ul class="chips" id="ls1"></ul></div>
+
+<div class="card"><h2>STEP2　できる事</h2><p class="sub">経験・技術・資格・人脈。「人より少し得意」で十分です。<a href="career-tanaoroshi.html">キャリアの棚卸しツール</a>を使うと見つかります。</p>
+<div class="row"><input type="text" id="in2" placeholder="例：栄養管理の実務15年、営業経験、調理師免許"><button class="btn sm" onclick="add(2)">追加</button></div>
+<ul class="chips" id="ls2"></ul></div>
+
+<div class="card"><h2>STEP3　求められる事</h2><p class="sub">周りの困りごと・頼まれる事・世の中の変化。「誰が」困っているかを思い浮かべて。</p>
+<div class="row"><input type="text" id="in3" placeholder="例：共働き家庭の夕食づくり、高齢者の買い物"><button class="btn sm" onclick="add(3)">追加</button></div>
+<ul class="chips" id="ls3"></ul></div>
+
+<div class="card"><h2>STEP4　重なりを探す</h2><p class="sub">書き出した中で「2つ以上の円に当てはまる」ものをタップしてください。それがあなたの<b>事業のタネ</b>です。</p>
+<ul class="chips" id="all" aria-live="polite"></ul>
+<div class="hint">例：「料理をふるまう（やりたい）×栄養管理（できる）×共働き家庭の夕食（求められる）」→ 健康惣菜店、というように言葉を掛け合わせてもOK。思いついた掛け合わせは下の欄へ。</div>
+<textarea id="memo" rows="2" style="margin-top:10px" placeholder="掛け合わせのメモ（例：栄養士の経験 × 惣菜 × 駅前の共働き世帯）"></textarea></div>
+
+<div class="result" id="res" hidden><h2>あなたの事業のタネ</h2><div id="seeds"></div>
+<p style="font-size:13px;margin:12px 0 0">このタネを「誰に・何を・どのように」の一文にすると、創業計画書の書き出しになります。</p>
+<div class="row noprint"><button class="btn ghost" onclick="copyRes()">結果をコピー</button><button class="btn ghost" onclick="window.print()">印刷・PDF保存</button></div></div>
+
+<script>
+const data={1:[],2:[],3:[]},seeds=new Set();
+function add(k){const el=document.getElementById('in'+k);const v=el.value.trim();if(!v)return;data[k].push(v);el.value='';render();el.focus();}
+function del(k,i){const v=data[k][i];data[k].splice(i,1);seeds.delete(v);render();}
+function toggle(v){seeds.has(v)?seeds.delete(v):seeds.add(v);render();}
+function render(){
+ for(const k of[1,2,3]){
+  document.getElementById('n'+k).textContent=data[k].length;
+  document.getElementById('ls'+k).innerHTML=data[k].map((v,i)=>`<li>${esc(v)}<button aria-label="削除" onclick="del(${k},${i})">×</button></li>`).join('');
+  const c=document.getElementById('c'+k);c.setAttribute('r',78+Math.min(data[k].length,8)*3);
+ }
+ const all=[...new Set([...data[1],...data[2],...data[3]])];
+ document.getElementById('all').innerHTML=all.map(v=>`<li style="cursor:pointer;${seeds.has(v)?'background:#FFD666;font-weight:700':''}" onclick="toggle('${esc(v)}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')toggle('${esc(v)}')">${esc(v)}${seeds.has(v)?' ★':''}</li>`).join('')||'<li style="background:none;color:#8a97a6">まずSTEP1〜3で書き出しましょう</li>';
+ const core=document.getElementById('core');core.setAttribute('r',seeds.size?30+Math.min(seeds.size,4)*6:0);
+ document.getElementById('coret').textContent=seeds.size?`タネ ${seeds.size}`:'';
+ const res=document.getElementById('res');res.hidden=!seeds.size;
+ document.getElementById('seeds').innerHTML=[...seeds].map(v=>`<div class="big" style="font-size:20px">★ ${esc(v)}</div>`).join('');
+}
+function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function copyRes(){const t='【私の事業のタネ】\n'+[...seeds].map(v=>'★ '+v).join('\n')+(document.getElementById('memo').value?'\n\n掛け合わせメモ：\n'+document.getElementById('memo').value:'');navigator.clipboard.writeText(t).then(()=>alert('コピーしました'));}
+for(const k of[1,2,3])document.getElementById('in'+k).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();add(k);}});
+render();
+</script>
+<div class="cta"><h2>本格的に創業計画書を作るなら</h2>
+<p style="margin:0 0 8px">日本政策金融公庫の創業計画書を、ことば→数字→仕上げの順にまるごと組み立てられる無料Excel「<b>創業計画書 一気通貫ワークシート</b>」を配布しています。このツールの結果は、そのままワークシートの下書きになります。</p>
+<a href="#workbook">▶ ワークシートを無料でダウンロード</a></div><div class="foot">
+<p>※ 本ツールの結果は一般的な目安であり、融資の可否や事業の成否を保証するものではありません。数値の出典等の詳細は各解説記事をご覧ください。</p>
+<div class="links">ほかのツール：
+<a href="mittsuno-wa.html">3つの円</a><a href="junbido-check.html">準備度チェック</a><a href="gessho-calc.html">月商逆算</a><a href="career-tanaoroshi.html">キャリア棚卸し</a><a href="mendan30.html">面談の質問30</a></div>
+<p style="margin-top:10px">© yoshi-startup</p></div>
+</div></body></html>
